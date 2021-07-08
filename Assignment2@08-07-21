@@ -1,0 +1,57 @@
+import java.util.*;
+class RightLeft
+{
+public static void main(String args[])
+{
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter size of array");
+n=sc.nextInt();
+int a[]=new int[n];
+int b[]=new int[n];
+System.out.println("enter elements");
+for(int i=0;i<n;i++)
+{
+  a[i]=sc.nextInt();
+}
+System.out.println("enter number of right rotations");
+int k=sc.nextInt();
+while(k!=0)
+{
+for(int i=0;i<n;i++)
+{
+for(int j=i+1;j>i;j--)
+{
+if(i!=n-1)
+b[j]=a[i];
+else
+b[0]=a[n-1];
+}
+}
+k--;
+for(int i=0;i<n;i++)
+{
+a[i]=b[i];
+}
+}
+System.out.println("enter number of left rotations");
+int y=sc.nextInt();
+while(y!=0)
+{
+for(int i=1;i<n;i++)
+{
+for(int j=i-1;j<i;j++)
+{
+a[j]=b[i];
+}
+}
+y--;
+a[n-1]=b[0];
+for(int i=0;i<n;i++)
+b[i]=a[i];
+}
+System.out.println("after right and left shifts array is");
+for(int i=0;i<n;i++)
+System.out.println(a[i]+" ");
+}
+}
