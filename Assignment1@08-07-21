@@ -1,0 +1,17 @@
+import java.util.*;
+class Diagonal
+{
+public static void main(String args[])
+{
+int m,n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter number of rows");
+m=sc.nextInt();
+System.out.println("enter number of columns");
+n=sc.nextInt();
+if(m==n)
+System.out.println("diagonal matrix");
+else
+System.out.println("not diagonal matrix");
+}
+}
