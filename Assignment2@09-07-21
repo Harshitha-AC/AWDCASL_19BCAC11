@@ -1,0 +1,21 @@
+import java.util.*;
+class CountLength
+{
+public static void main(String args[])
+{
+String str;
+int sum=0;
+System.out.println("enter string");
+Scanner sc=new Scanner(System.in);
+str=sc.nextLine();
+String ch[]=str.split(" ");
+for(int i=0;i<ch.length;i++)
+{
+
+sum+=ch[i].length();
+}
+System.out.println("the length of the data is:"+sum);
+}
+}
+
+
