@@ -1,0 +1,28 @@
+import java.util.*;
+class Str
+{
+public static void main(String args[])
+{
+String str;
+int u=0,s=0,l=0,di=0;
+System.out.println("enter string");
+Scanner sc=new Scanner(System.in);
+str=sc.nextLine();
+char ch[]=str.toCharArray();
+for(int i=0;i<ch.length;i++)
+{
+if(Character.isUpperCase(ch[i]))
+u++;
+else if(Character.isLowerCase(ch[i]))
+l++;
+else if(Character.isDigit(ch[i]))
+di++;
+else
+s++;
+}
+if((u==l)&&(l==s)&&(di==s))
+System.out.println("yes");
+else
+System.out.println("no");
+}
+}
