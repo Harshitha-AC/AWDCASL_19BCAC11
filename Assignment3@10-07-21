@@ -1,0 +1,30 @@
+import java.util.*;
+class Dohb
+{
+public static void main(String args[])
+{
+char ch;int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a decimal value");
+n=sc.nextInt();
+System.out.println("1.decimal to binary 2.decimal to octal 3.decimal to hexa");
+System.out.println("enter your choice");
+ch=sc.next().charAt(0);
+switch(ch)
+{
+case  '1': String b=Integer.toBinaryString(n);
+              System.out.println(b);
+             break;
+case  '2': String o=Integer.toOctalString(n);
+               System.out.println(o);
+              break;
+case  '3' : String h=Integer.toHexString(n); 
+               System.out.println(h);
+              break;
+default : System.out.println("enter correct choice");
+               break;
+}
+}
+}
+
+
