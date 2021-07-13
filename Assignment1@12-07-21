@@ -1,0 +1,21 @@
+import java.util.*;
+class FirstUpper
+{
+public static void main(String args[])
+{
+String str;int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a string");
+str=sc.nextLine();
+char ch[]=str.toCharArray();
+ch[0]=Character.toUpperCase(ch[0]);
+n=ch.length;
+for(int i=1;i<n;i++)
+{
+if(i+1<n && ch[i]==' ')
+ch[i+1]=Character.toUpperCase(ch[i+1]);
+}
+System.out.println(ch);
+
+}
+}
