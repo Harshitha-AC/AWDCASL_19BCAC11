@@ -1,0 +1,19 @@
+import java.util.*;
+class ReverseString
+{
+public static void main(String args[])
+{
+StringBuilder str=new StringBuilder();
+String s1;int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a string");
+s1=sc.nextLine();
+char ch[]=s1.toCharArray();
+n=ch.length-1;
+for(int i=n;i>=0;i--)
+{
+str.append(ch[i]);
+}
+System.out.println(str);
+}
+}
