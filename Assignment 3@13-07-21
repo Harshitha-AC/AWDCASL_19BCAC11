@@ -1,0 +1,41 @@
+
+import java.util.*;
+class Reduce
+{
+
+static int reduceString(String s, int l)
+{
+  int count = 1, steps = 0;
+  for (int i = 1; i < l; i++)
+  { 
+     if (s.charAt(i) == s.charAt(i - 1))
+     count += 1;
+     else
+     {
+
+       steps += (count / 2);
+ 
+       count = 1;
+
+     }
+
+ }
+
+        steps += count / 2;
+
+    return steps;
+}
+
+public static void main(String[] args)
+{
+
+    String s = "helloworld";
+    int l = s.length();
+
+    System.out.print(reduceString(s, l) + "\n");
+}
+________________________________________________
+output:
+aabbbcca
+reducestring
+aabcca
