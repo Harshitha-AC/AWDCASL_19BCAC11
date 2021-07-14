@@ -1,0 +1,27 @@
+import java.util.*;
+class Factorial1
+{
+static int factorial(int m)
+{
+if(m==0)
+return 1;
+else
+return(m*factorial(m-1));
+}
+public static void main(String args[])
+{
+int n,fact;
+System.out.println("enter a number");
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+fact=1;
+fact=factorial(n);
+System.out.println("factorial is:"+fact);
+}
+}
+_____________________________________________________________________________________________________________________________________________
+output:
+enter a number
+4
+factorial is:24
+
