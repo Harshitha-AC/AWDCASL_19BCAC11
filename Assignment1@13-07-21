@@ -1,0 +1,57 @@
+import java.util.*;
+class Operations
+{
+public static void main(String args[])
+{
+int ins;char ch;String str;int count=0;
+System.out.println("enter a string");
+Scanner sc=new Scanner(System.in);
+str=sc.nextLine();
+StringBuffer s1=new StringBuffer(str);
+System.out.println("enter number of operations");
+int op;
+op=sc.nextInt();
+while(op>0)
+{
+System.out.println("enter a position and letter to be inserted");
+ins=sc.nextInt();
+ch=sc.next().charAt(0);
+s1.insert(ins,ch);
+str=s1.toString();
+op--;
+}
+System.out.println("enter 2 positions to reverse");
+int p1,p2;
+p1=sc.nextInt();
+p2=sc.nextInt();
+p1=p1-1;
+p2=p2-1;
+str=str.substring(p1,p2);
+s1.toString();
+s1=str;
+s1.reverse();
+str=s1.toString();
+s1=s1.insert(p1,s1);
+str=s1;
+for(int i=0;i<str.length();i++)
+{
+if(str.contains(s1(i)))
+count++;
+}
+}
+}
+_______________________________________________________________________________________________________________________________
+output:
+enter a string
+helloworld
+enter operations
+2
+enter a position and letter to be inserted
+1 a
+enter a position and letter to be inserted
+2 b
+aelloworld
+ablloworld
+
+
+
