@@ -1,0 +1,60 @@
+import java.util.*;
+class TestOperations
+{
+public static void main(String args[])
+{
+  ArrayList<Integer> A=new ArrayList<Integer>();
+  add_to_ArrayList(10);
+  add_to_ArrayList(20);
+  add_to_ArrayList(30);
+  sort_ArrayList_Asc();
+  reverse_ArrayList();
+  size_Of_ArrayList();
+  sort_ArrayList_Desc();
+  print_ArrayList();
+  
+ void add_to_ArrayList( int x)
+ {
+      A.add(x);
+ }	
+ void sort_ArrayList_Asc()
+ {
+      Collections.sort(A);
+  }
+ void reverse_ArrayList()
+ {
+      Collections.reverse(A);
+ }
+ void size_Of_ArrayList()
+ {
+      System.out.println(A.size());
+        
+ }
+ void sort_ArrayList_Desc()
+{
+    Collections.sort(A,Collections.reverseOrder());
+ }
+ void print_ArrayList()
+ {
+        for(Integer i:A)
+        System.out.println(i+" ");
+ }
+}
+}
+_______________________________________________________________________
+output:
+50 
+1 50 
+650 
+50 
+650 
+50 
+427 
+650 
+50 
+427 
+3 3 5 23 
+50 
+70 
+427 
+650 
