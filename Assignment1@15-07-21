@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+	  
+ArrayList<Integer> a1=new ArrayList<Integer>();
+a1.add(10);
+a1.add(20);
+a1.add(30);
+ArrayList<Integer> a2=new ArrayList<Integer>();
+a2.add(100);
+a2.add(25);
+a2.add(50);
+System.out.println("first arraylist:"+a1);
+System.out.println("second arraylist:"+a2);
+a1.addAll(a2);
+Collections.sort(a1);
+System.out.println("final list:"+a1);
+}
+}
+___________________________________________________________________________________________________________
+output:
+first arraylist:[10, 20, 30]
+second arraylist:[100, 25, 50]
+final list:[10, 20, 25, 30, 50, 100]
