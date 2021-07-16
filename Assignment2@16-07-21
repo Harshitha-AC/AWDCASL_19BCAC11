@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	LinkedList<Integer> l1=new LinkedList<Integer>();
+int g=0,j=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter no of elements");
+int n=sc.nextInt();
+for(Integer i=0;i<n;i++)
+{
+l1.add(sc.nextInt());
+}
+System.out.println(l1);
+System.out.println("enter element to delete");
+int e=sc.nextInt();
+for(int m=0;m<n-1;m++)
+{
+g=l1.get(m);
+if(g==e)
+l1.remove(m);
+else
+j++;
+}
+if(j==n)
+System.out.println("element not found");
+else
+System.out.println(l1);
+}
+}
+____________________________________________________________________________________________________________
+output:
+enter no of elements
+5
+2 4 6 7 2
+[2,4,6,7,2]
+enter element to delete
+2
+[4,6,7]
