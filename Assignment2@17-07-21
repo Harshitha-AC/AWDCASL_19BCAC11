@@ -1,0 +1,50 @@
+import java.util.*;
+class UpdateVector
+{
+public static void main(String args[])
+{
+Vector v=new Vector();Integer s;
+v.add(101);
+v.add("Rama");
+v.add(6.58);
+v.add(102);
+v.add("Gita");
+v.add(8.98);
+System.out.println(v);
+v.remove(4);
+Integer n=v.size();
+for(Integer i=0;i<n;i++)
+{
+
+System.out.print(v.get(i)+" ");
+}
+
+
+Double b=6.58;
+for(int j=0;j<n;j++)
+{
+System.out.println("i am printing:"+v.get(j));
+if(v.get(j)==b)
+{
+v.set(j,9.17);
+}
+}
+
+for(Integer i=0;i<n;i++)
+{
+
+System.out.println(v.get(i)+" ");
+}
+if(v.contains("Sita"))
+System.out.println();
+else
+System.out.println("false");
+}
+}
+________________________________________________________________________________________________
+output:
+[101,Rama,6.58.102,Gita,8.98]
+101 Rama 6.58 102 8.98
+101 Rama 9.17 102 8.98
+false
+
