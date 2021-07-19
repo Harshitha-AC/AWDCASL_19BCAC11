@@ -1,0 +1,32 @@
+import java.util.*;
+class Hashmapsort
+{
+public static void main(String args[])
+{
+int n,key;String s;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter number of values u want to insert");
+n=sc.nextInt();
+HashMap<Integer,String> x=new HashMap<Integer,String>();
+for(int i=1;i<=n;i++)
+{
+System.out.println("enter key and value");
+key=sc.nextInt();
+s=sc.next();
+x.put(key,s);
+}
+TreeMap<Integer,String> t=new TreeMap<Integer,String>(x);
+System.out.println(t);
+}
+}
+_______________________________________________________________________________________________________________
+output:
+enter number of values u want to insert
+3
+enter key and value
+5 suchi
+enter key and value
+3 moni
+enter key and value
+2 ashwi
+{2=ashwi,3=moni,5=suchi}
