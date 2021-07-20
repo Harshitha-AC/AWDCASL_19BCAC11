@@ -1,0 +1,39 @@
+import java.util.*;
+class ArrayList3
+{
+public static void main(String args[])
+{
+public static void main(String[] args) {
+ArrayList<Integer> x1=new ArrayList<Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+Integer n=sc.nextInt();
+System.out.println("enter elements");
+for(int i=0;i<n;i++)
+{
+x1.add(sc.nextInt());    
+}
+System.out.println("enter k value");
+Integer k=sc.nextInt();
+Iterator<Integer> z =x1.iterator();
+while(z.hasNext())
+{
+    if(z.next()<k)
+    z.remove();    
+}
+System.out.println(x1);
+
+}
+}
+____________________________________________________________________________________
+output:
+enter n value
+7
+enter elements
+30 40 15 20 25 7 99
+enter k value
+20
+30 40 25 99
+enter k value
+20
+30 40 25 99
