@@ -1,0 +1,31 @@
+import java.util.*;
+class HashmapDivisibility
+{
+public static void main(String args[])
+{
+HashMap<Integer,Integer> h1=new HashMap<Integer,Integer>();
+int count1=0,count2=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter 10 numbers");
+for(int i=1;i<=10;i++)
+{
+h1.put(i,sc.nextInt());
+}
+for(int j=1;j<=10;j++)
+{
+int x=h1.get(j);
+if(x%5==0)
+count1+=1;
+if(x%3==0)
+count2+=1;
+}
+System.out.println("5="+count1);
+System.out.println("3="+count2);
+}
+}
+_______________________________________________________________________________
+output:
+enter 10 numbers
+12 5 10 20 9 3 6 7 8 11
+5=3
+3=4
