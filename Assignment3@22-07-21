@@ -1,0 +1,46 @@
+import java.util.*;
+class HashmapSalary
+{
+public static void main(String args[])
+{
+Hashtable<Integer,Integer> h1=new Hashtable<Integer,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+System.out.println("enter elements");
+int j=101;
+for(int i=1;i<=n;i++)
+{
+
+h1.put(j,sc.nextInt());
+j++;
+}
+System.out.println(h1);
+System.out.println("enter a key to search");
+int key=sc.nextInt();
+if(h1.containsKey(key))
+{
+int x=h1.get(key);
+h1.put(key,x+5000);
+System.out.println(h1);
+}
+else
+{
+System.out.println("value not found");
+}
+}
+}
+_________________________________________________________________________________________-
+output:
+enter n value
+5
+enter elements
+50000
+45000
+35000
+40000
+45000
+{105=45000,104=40000,103=35000,102=45000,101=50000}
+enter a key to search
+103
+{105=45000,104=40000,103=40000,102=45000,101=50000}
