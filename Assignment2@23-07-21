@@ -1,0 +1,26 @@
+import java.util.*;
+class StackReverseString
+{
+public static void main(String args[])
+{
+Stack<Character> st=new Stack<Character>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a string");
+String s=sc.next();
+char ch[]=s.toCharArray();
+for(char i:ch)
+{
+st.push(i);
+}
+for(char i:ch)
+{
+System.out.print(st.peek()+" ");
+st.pop();
+}
+}
+}
+____________________________________________________________________________________________
+output:
+enter a string 
+welcome
+e m o c l e w
