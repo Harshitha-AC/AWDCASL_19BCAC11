@@ -1,0 +1,30 @@
+import java.util.*;
+class StackMaxMin
+{
+public static void main(String args[])
+{
+Stack<Integer> st=new Stack<Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+System.out.println("enter elements");
+for(int i=0;i<n;i++)
+{
+st.push(sc.nextInt());
+}
+System.out.println("Maximum value:"+Collections.max(st));
+System.out.println("Minimum value:"+Collections.min(st));
+}
+}
+______________________________________________________________________________________
+output:
+enter n value
+5
+enter elements
+10
+20
+5
+40
+7
+Maximum value:40
+Minimum value:5
