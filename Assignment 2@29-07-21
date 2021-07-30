@@ -1,0 +1,41 @@
+import java.util.*;
+class PrimeEvenPos
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int count;
+System.out.println("enter range");
+int n1=sc.nextInt();
+int n2=sc.nextInt();
+int c=n2-n1;
+int size=c+1;
+int j=0;
+int ar[]=new int[size];
+while(n1>0 && n1<=n2)
+{
+count=0;
+for(int i=1;i<=n1;i++)
+{
+  if(n1%i==0)
+  count++;
+}
+n1++;
+if(count==2)
+{
+ar[j]=n1;
+j++;
+}
+}
+System.out.println("even position of prime numbers are");
+for(int i=1;i<size;i+=2)
+{
+ System.out.println(ar[i]);
+}
+}
+}
+-----------------------------------------
+output:
+enter range 2 10
+even position of prime numbers are
+3 7
