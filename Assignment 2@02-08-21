@@ -1,0 +1,32 @@
+import java.util.*;
+class PrefixFactorial
+{
+public static void main(String args[])
+{
+int n=50;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter number of queries");
+int q=sc.nextInt();
+int prefix[]=new int[n+1];
+prefix[0]=1;
+for(int i=1;i<n+1;i++)
+{
+ prefix[i]=prefix[i-1]*i;
+}
+for(int i=0;i<q;i++)
+{
+  System.out.println("enter number");
+  int a=sc.nextInt();
+  System.out.println("the factorial of the number is:"+prefix[a]);
+}
+}
+}
+__________________________________________________________________________
+output:
+enter number of queries 3
+enter number 2
+the factorial of the number is: 2
+enter number 6
+the factorial of the number is: 720
+enter number 4
+the factorial of the number is:24
