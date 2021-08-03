@@ -1,0 +1,32 @@
+import java.util.*;
+class PrefixSumAdd
+{
+public static void main(String args[])
+{
+int n=1000;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter number of queries");
+int q=sc.nextInt();
+int prefix[]=new int[n+1];
+prefix[0]=0;
+for(int i=1;i<n+1;i++)
+{
+ prefix[i]=prefix[i-1]+2*i;
+}
+for(int i=0;i<q;i++)
+{
+ System.out.println("enter number");
+ int a=sc.nextInt();
+System.out.println("the sum of "+a+"even numbers:"+prefix[a]);
+}
+}
+}
+________________________________________________________________
+output:
+enter number of queries 3
+enter number 2
+the sum of 2 even numbers: 6
+enter number 5
+the sum of 5 even numbers: 30
+enter number 1
+the sum of 1 even numbers: 2
