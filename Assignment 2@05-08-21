@@ -1,0 +1,48 @@
+import java.util.*;
+class ArrayAdd
+{
+ public static void main(String args[])
+{
+  Scanner sc=new Scanner(System.in);
+  int n=sc.nextInt();int sum=0,sum1=0;
+  int a[]=new int[n];
+  for(int i=0;i<n;i++)
+  {
+    a[i]=sc.nextInt();
+  }
+  System.out.println("enter x");
+  int x=sc.nextInt();
+  System.out.println("enter l and m");
+  int l=sc.nextInt();
+  int m=sc.nextInt();
+  System.out.println("sum of the elements before update");
+  for(int i=l;i<=m;i++)
+  {
+    sum+=a[i];
+  }
+  System.out.println(sum);
+  System.out.println("enter a and b");
+  int a=sc.nextInt();
+  int b=sc.nextInt();
+  for(int i=a;i<=b;i++)
+  {
+    a[i]=a[i]+x;
+  }
+System.out.println("sum of the elements after update");
+  for(int i=l;i<=m;i++)
+  {
+    sum1+=a[i];
+  }
+  System.out.println(sum1);
+}
+}
+-------------------------------------------------
+Output:
+n=6
+1 3 5 7 9 11
+enter x 10
+enter l and m 1 3
+sum of elements before update 15
+enter a and b 1 5
+sum of elements after update 45
+
