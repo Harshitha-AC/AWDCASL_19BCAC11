@@ -1,0 +1,20 @@
+public class Solution {
+    // you need treat n as an unsigned value
+    public int reverseBits(int n) {
+        String num=Integer.toString(n);int a[]=new int[num.length()];
+        char b[]=new char[num.length()];int j=0;
+        for(int i=0;i<num.length();i++)
+        {
+            b[i]=num.charAt(i);
+        }
+        
+        for(int i=num.length()-1;i<=0;i++)
+        {
+            a[j]=b[i];
+            j++;
+            
+        }
+        return a;
+        
+    }
+}
