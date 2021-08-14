@@ -1,0 +1,39 @@
+import java.util.*;
+class IndirectRecursion
+{
+static int n=0,N=50;
+ static void  func1()
+{
+if(n==N)
+return;
+else
+{
+n=n+5;
+System.out.println(n+"\t");
+ func2();
+}
+}
+ static void  func2()
+{
+n=n+5;
+System.out.println(n+"\t");
+ func1();
+}
+public static void main(String args[])
+{
+    func1();
+}
+}
+___________________________________________________________
+output:
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+
